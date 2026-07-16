@@ -3,7 +3,6 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  Download,
   FolderKanban,
   Users,
   Code2,
@@ -133,14 +132,6 @@ export function About() {
                   icon={<ArrowRight className="h-4 w-4" aria-hidden="true" />}
                 >
                   Let&apos;s Work Together
-                </Button>
-                <Button
-                  href="/resume.pdf"
-                  variant="secondary"
-                  icon={<Download className="h-4 w-4" aria-hidden="true" />}
-                  iconPosition="left"
-                >
-                  Download Resume
                 </Button>
               </div>
             </FadeIn>
