@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* RGB channels for Tailwind opacity support (e.g. bg-primary/20) */
+  --background: 255 255 255;
+  --background-alt: 250 250 250;
+  --foreground: 26 26 46;
+  --muted: 250 250 250;
+  --muted-foreground: 107 114 128;
+  --card: 255 255 255;
+  --card-foreground: 26 26 46;
+  --card-border: 240 240 240;
+  --primary: 255 107 53;
+  --primary-foreground: 255 255 255;
+  --accent: 255 107 53;
+  --accent-soft: 255 240 235;
+  --border: 240 240 240;
+  --ring: 255 107 53;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    background-color: rgb(var(--primary) / 0.2);
+    color: rgb(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .container-section {
+    @apply mx-auto max-w-7xl px-6;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .gradient-blob {
+    @apply pointer-events-none absolute rounded-full blur-3xl;
+  }
+
+  .font-brand {
+    font-family: var(--font-orbitron), system-ui, sans-serif;
+  }
+}
